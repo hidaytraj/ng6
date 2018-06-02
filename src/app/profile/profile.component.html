@@ -1,0 +1,47 @@
+<div class="card hovercard profile-sidebar">
+  <div class="cardheader">
+
+  </div>
+  <div class="avatar">
+      <img alt="" src="{{(profile?.profile_pic) ? profile?.profile_pic : './assets/images/'+currentGender}}">
+  </div>
+  <div class="info">
+      <div class="title">
+          <a target="_blank" href="https://github.com/hidaytrahman">{{profile?.fname}} {{profile?.lname}}</a>
+      </div>
+      <div class="desc">
+          <strong>{{profile?.designation}}</strong>
+      </div>
+      <div class="desc">{{profile?.mobile}}</div>
+      <div class="desc">{{profile?.email}}</div>
+
+      <hr>
+      <div class="skills">
+          <span *ngFor="let skill of skills">{{skill}}</span>
+      </div>
+      <hr>
+      <nav class="side-nav">
+          <a routerLink="/dashboard" class="btn nav-item">Home</a>
+          <a routerLink="/products" class="btn nav-item">Products</a>
+          <a routerLink="/offers" class="btn nav-item">Offers</a>
+          <a routerLink="/app-edit-profile" class="btn nav-item">Edit Profiles</a>
+      </nav>
+  </div>
+  <div class="bottom">
+      <a class="btn btn-primary btn-twitter btn-sm social" href="https://twitter.com/webmaniac">
+          <i class="fa fa-twitter"></i>
+      </a>
+      <a class="btn btn-danger btn-sm social" rel="publisher" href="https://plus.google.com/+ahmshahnuralam">
+          <i class="fa fa-google-plus"></i>
+      </a>
+      <a class="btn btn-primary btn-sm social" rel="publisher" href="https://plus.google.com/shahnuralam">
+          <i class="fa fa-facebook"></i>
+      </a>
+      <a class="btn btn-warning btn-sm social" rel="publisher" href="https://plus.google.com/shahnuralam">
+          <i class="fa fa-behance"></i>
+      </a>
+  </div>
+  <button (click)="logOut()" type="button" class="btn btn-primary btn-sm">
+      <span class="fa fa-sign-out"></span> Log out
+  </button>
+</div>

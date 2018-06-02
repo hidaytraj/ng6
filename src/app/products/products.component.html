@@ -1,0 +1,22 @@
+<div class="loader-wrapper" *ngIf="isLoading">
+  <div class="loader">
+      <img src="./assets/images/ajax-loader.gif">
+  </div>
+</div>
+<app-header></app-header>
+<br>
+<div class="container dashboard">
+  <div class="row">
+      <div class="col-lg-3 col-sm-6">
+          <app-profile></app-profile>
+      </div>
+      <div class="col-lg-9 col-sm-6">
+          <br>
+          <h3>Hello {{profile?.fname}}!</h3>
+          <p>{{profile?.about}}</p>
+      </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

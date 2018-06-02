@@ -1,0 +1,30 @@
+{
+    "status": 1,
+    "message": "Profile details",
+    "profile": {
+        "fname": "Hidayt",
+        "lname": "Rahman",
+        "email": "hidaytraj@gmail.com",
+        "mobile": 1234567890,
+        "profile_pic": "https://avatars3.githubusercontent.com/u/9712111?s=460",
+        "id": 2,
+        "gender": "male",
+        "designation": "Lead UI Developer",
+        "skills": "HTML5, CSS3, jQuery, javaScript, Angular, Bootstrap, AJAX, RWD",
+        "about": "UI Developer\/Frontend developer specialized in HTML5, CSS3 and Mobile Compatible (Responsive) based website and Frontend Application Development. I develop user-friendly web interfaces to the highest W3C standards.\r\nStarted working on Angular 4\r\n\r\n\r\nI create websites that allow the user to experience your website in the best and most appropriate way suited to the device they are using\r\n\r\nBy working using progressive enhancement, a website is delivered with a responsive layout that can best make use of the space available on the smallest to largest devices.",
+        "social_media": [
+            {
+                "title": "Facebook",
+                "url": "https://www.facebook.com/hidaytrahman"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/hidaytrahman"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/hidaytrahman"
+            }
+        ]
+    }
+}

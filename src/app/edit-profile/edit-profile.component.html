@@ -1,0 +1,44 @@
+<div class="loader-wrapper" *ngIf="isLoading">
+  <div class="loader">
+    <img src="./assets/images/ajax-loader.gif">
+  </div>
+</div>
+<app-header></app-header>
+<br>
+<div class="container dashboard">
+  <div class="row">
+    <div class="col-lg-3 col-sm-6">
+      <app-profile></app-profile>
+    </div>
+    <div class="col-lg-9 col-sm-6">
+      <br>
+
+      <h3>
+        <i>FormControl in a FormGroup</i>
+      </h3>
+      <!-- Edit Profile Form -->
+      <form [formGroup]="editForm">
+        <div class="form-group">
+          <label class="center-block">Name:
+            <input class="form-control" formControlName="name">
+          </label>
+
+          <label class="center-block">Designation:
+            <input class="form-control" formControlName="designation">
+          </label>
+
+          <label class="center-block">Phone:
+            <input class="form-control" formControlName="phone">
+          </label>
+        </div>
+        <p>Form value: {{ editForm.value | json }}</p>
+        <p>Form status: {{ editForm.status | json }}</p>
+
+      </form>
+      <!-- Edit Profile Form end -->
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

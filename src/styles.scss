@@ -1,0 +1,94 @@
+@import "./assets/sass/main";
+@import '../node_modules/font-awesome/scss/font-awesome';
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background: url('./assets/images/bg-login2.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 12%;
+    background: #fff;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.dashboard {
+    background: #ffffffd6;
+}
+
+.text-loader {
+    position: absolute;
+    left: 50%;
+    margin-left: -1.9em;
+    color: hsla(0, 0%, 100%, .3);
+    font: 900 800% Baskerville, 'Palatino Linotype', Palatino, serif;
+    font-size: 2em;
+    top: 5%;
+}
+
+@keyframes loading {
+    from {
+        max-width: 0;
+    }
+}
+
+.text-loader:before {
+    content: attr(data-content);
+    position: absolute;
+    overflow: hidden;
+    max-width: 4em;
+    color: white;
+    animation: loading 3s linear;
+}
+
+.skills {
+    span {
+        font-size: .7em;
+        background: #cecece;
+        padding: 2px 6px;
+        display: inline-block;
+        margin: 2px;
+    }
+}
+
+.side-nav {
+    .nav-item {
+        background: #c7cacc;
+        margin: 2px;
+        color: #5e5f61;
+        font-size: 0.9em;
+    }
+}

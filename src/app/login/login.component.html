@@ -1,0 +1,37 @@
+<div class="container">
+
+  <div class="form-signin">
+    <form #loginForm="ngForm">
+      <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+      <div class="alert alert-danger" *ngIf="errorStatus">
+        {{errorMessage}}
+      </div>
+      <div *ngIf="uname.invalid && (uname.dirty || uname.touched)" class="alert alert-danger">
+        <div *ngIf="uname.errors.required">
+          Enter Username
+        </div>
+      </div>
+
+      <div *ngIf="upwd.invalid && (upwd.dirty || upwd.touched)" class="alert alert-danger">
+        <div *ngIf="upwd.errors.required">
+          Enter Password
+        </div>
+      </div>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="username" name="uname" #uname="ngModel" [(ngModel)]="inputUsername" class="form-control" placeholder="Username"
+        required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="upwd" #upwd="ngModel" [(ngModel)]="inputPassword" class="form-control" placeholder="Password"
+        required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="loginForm.form.invalid" (click)="doLogin(inputUsername,inputPassword)">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+
+    </form>
+    <h1 data-content="loading..." class="text-loader" *ngIf="showLoader">loading...</h1>
+  </div>
+</div>
