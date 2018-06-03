@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: "app-edit-profile", component: EditProfileComponent },
   { path: "products", component: ProductsComponent },
   { path: "offers", component: OffersComponent }
-
 ]
 
 

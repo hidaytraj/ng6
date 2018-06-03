@@ -4,6 +4,9 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
+
 
 
 import { AppComponent } from './app.component';
@@ -40,7 +43,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component'
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [GlobalService],
+  providers: [GlobalService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

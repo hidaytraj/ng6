@@ -17,7 +17,7 @@
 
       <hr>
       <div class="skills">
-          <span *ngFor="let skill of skills">{{skill}}</span>
+          <span *ngFor="let skill of profile?.skills">{{skill}}</span>
       </div>
       <hr>
       <nav class="side-nav">
@@ -44,4 +44,10 @@
   <button (click)="logOut()" type="button" class="btn btn-primary btn-sm">
       <span class="fa fa-sign-out"></span> Log out
   </button>
+</div>
+
+<div class="loader-wrapper" *ngIf="isLoading">
+    <div class="loader">
+        <img src="./assets/images/ajax-loader.gif">
+    </div>
 </div>

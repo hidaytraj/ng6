@@ -12,30 +12,220 @@
     </div>
     <div class="col-lg-9 col-sm-6">
       <br>
-
-      <h3>
-        <i>FormControl in a FormGroup</i>
-      </h3>
       <!-- Edit Profile Form -->
-      <form [formGroup]="editForm">
-        <div class="form-group">
-          <label class="center-block">Name:
-            <input class="form-control" formControlName="name">
-          </label>
-
-          <label class="center-block">Designation:
-            <input class="form-control" formControlName="designation">
-          </label>
-
-          <label class="center-block">Phone:
-            <input class="form-control" formControlName="phone">
-          </label>
+      <form class="form-horizontal" [formGroup]="editForm">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <h2>Update Profile</h2>
+            <hr>
+          </div>
         </div>
-        <p>Form value: {{ editForm.value | json }}</p>
-        <p>Form status: {{ editForm.status | json }}</p>
+        <div class="row">
+          <div class="col-md-3 field-label-responsive">
+            <label for="name">First Name</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem">
+                  <i class="fa fa-user"></i>
+                </div>
+                <input type="text" formControlName="fname" class="form-control" placeholder="Hidayt">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle">
+                <!-- Put name validation error messages here -->
+              </span>
+            </div>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col-md-3 field-label-responsive">
+            <label for="name">Last Name</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem">
+                  <i class="fa fa-user"></i>
+                </div>
+                <input type="text" formControlName="lname" name="lname" class="form-control" placeholder="Rahman" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle">
+                <!-- Put name validation error messages here -->
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 field-label-responsive">
+            <label for="email">E-Mail</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem">
+                  <i class="fa fa-at"></i>
+                </div>
+                <input type="text" formControlName="email" name="email" class="form-control" id="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle">
+                <!-- Put e-mail validation error messages here -->
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 field-label-responsive">
+            <label for="email">Mobile</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <input type="text" formControlName="mobile" name="mobile" class="form-control" placeholder="00 000" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle">
+                <!-- Put e-mail validation error messages here -->
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 field-label-responsive">
+            <label for="email">Designation</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <input type="text" formControlName="designation" name="designation" class="form-control" placeholder="Developer" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle">
+                <!-- Put e-mail validation error messages here -->
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 field-label-responsive">
+            <label for="email">About</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem">
+                  <i class="fa fa-user"></i>
+                </div>
+                <textarea formControlName="about" name="about" class="form-control" placeholder="Tell us about your self" required></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle">
+                <!-- Put e-mail validation error messages here -->
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="row">
+          <div class="col-md-3 field-label-responsive">
+            <label for="email">Gender</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem">
+                  <i class="fa fa-user"></i>
+                </div>
+                <input type="radio" formControlName="male" name="gender" class="">Male
+                <input type="radio" formControlName="female" name="gender" class="">Female
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle">
+                <!-- Put e-mail validation error messages here -->
+        <!--
+              </span>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="row">
+            <div class="col-md-3 field-label-responsive">
+              <label for="email">Skills</label>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                  <div class="input-group-addon" style="width: 2.6rem">
+                    <i class="fa fa-user"></i>
+                  </div>                  
+                  <select formControlName="skills" name="skills" class="form-control" required>
+                    <option selected>Please Select Skills</option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-control-feedback">
+                <span class="text-danger align-middle">
+                  <!-- Put e-mail validation error messages here -->
+        <!--
+                </span>
+              </div>
+            </div>
+          </div> -->
+
+
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-success" (click)="doUpdate(editForm.value)">Update It
+              <i class="fa fa-user-plus"></i>
+            </button>
+          </div>
+        </div>
       </form>
       <!-- Edit Profile Form end -->
+
+
+
+
     </div>
 
   </div>

@@ -10,7 +10,7 @@
         "id": 2,
         "gender": "male",
         "designation": "Lead UI Developer",
-        "skills": "HTML5, CSS3, jQuery, javaScript, Angular, Bootstrap, AJAX, RWD",
+        "skills": ["HTML5", "CSS3", "jQuery", "javaScript", "Angular", "Bootstrap", "AJAX", "RWD"],
         "about": "UI Developer\/Frontend developer specialized in HTML5, CSS3 and Mobile Compatible (Responsive) based website and Frontend Application Development. I develop user-friendly web interfaces to the highest W3C standards.\r\nStarted working on Angular 4\r\n\r\n\r\nI create websites that allow the user to experience your website in the best and most appropriate way suited to the device they are using\r\n\r\nBy working using progressive enhancement, a website is delivered with a responsive layout that can best make use of the space available on the smallest to largest devices.",
         "social_media": [
             {
@@ -28,3 +28,4 @@
         ]
     }
 }
+

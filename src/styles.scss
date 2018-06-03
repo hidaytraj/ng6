@@ -47,6 +47,7 @@ body {
 
 .dashboard {
     background: #ffffffd6;
+    padding: 1%;
 }
 
 .text-loader {
@@ -91,4 +92,8 @@ body {
         color: #5e5f61;
         font-size: 0.9em;
     }
+}
+
+.center-block {
+    display: block;
 }

@@ -12,7 +12,6 @@ export class ProfileComponent implements OnInit {
   profile;
   isLoading: boolean = false;
   currentGender: string = "";
-  skills:any;
   constructor(private globalService:GlobalService, private router:Router) {
     
     this.checkSession();
@@ -23,9 +22,8 @@ export class ProfileComponent implements OnInit {
         var res = res.profile;
         this.dpGenderCheck(res.gender);
           this.currentUser = res.email;
-          this.profile = res;
-          this.skills = res.skills.split(",");
-          console.log(res);
+          this.profile = res;         
+          //console.log(res);
           this.isLoading = false;
       },
       err => console.error("Http Error :"+err),

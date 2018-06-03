@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalService } from '../services/global.service'
 import { LoginService } from '../services/login.service'
 import { Router } from '@angular/router';
 
@@ -9,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  allUsers;
   inputUsername = "";
   inputPassword = "";
   showLoader: boolean = false;
@@ -17,7 +15,8 @@ export class LoginComponent implements OnInit {
   errorMessage: string;
   isUserValid: boolean = false;
 
-  constructor(private globalService: GlobalService, private router: Router, private loginService: LoginService) {}
+  constructor(private router: Router, private loginService: LoginService) {
+  }
   // Login Call
   private doLogin(uname, pwd) {
     this.showLoader = true;
@@ -40,6 +39,8 @@ export class LoginComponent implements OnInit {
       },
       err => console.error("Error : " + err)
     )
+
+   
   }
 
 

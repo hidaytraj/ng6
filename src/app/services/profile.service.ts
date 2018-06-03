@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 
-export class GlobalService {
+export class ProfileService {
     localProfile = "./assets/data/profile.mock.json";
     rootDomain: string = "http://clickimagine.com/api/";
     urlProfile: string = this.rootDomain + "profile";   
